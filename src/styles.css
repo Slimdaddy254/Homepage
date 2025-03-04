@@ -11,6 +11,9 @@
   body {
     position: relative;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   
   .top-decoration {
     position: absolute;
@@ -30,11 +33,11 @@
     align-items: center;
     padding: 30px 30px 50px 30px;
   }
-  
+
   h1 {
     margin-bottom: 15px;
     font-family: "Big Shoulders Stencil", sans-serif;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 400ms ease-in-out;
   }
   h1:hover{
     transform: scale(1.05); 
@@ -45,9 +48,11 @@
     padding: 40px;
     font-family: "Comfortaa", sans-serif;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-
+    transition: transform 400ms ease-in-out;
   }
-  
+  .about-me:hover{
+    transform: scale(1.02);
+  }
   .about-me > p {
     margin-bottom: 15px;
   }
@@ -63,7 +68,7 @@
     height: 30px;
     border: 0px; 
     background-color: white;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.5s ease-in-out;
   }
   button:hover, .icons:hover {
     transform: scale(1.4); 
@@ -71,7 +76,11 @@
   
   .profile-container {
     position: relative;
+    transition:transform 0.8s ease-in-out ;
   }
+  .profile-container:hover{
+    transform: scale(1.07); 
+}
   
   .profile-pic {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
@@ -100,17 +109,16 @@
       font-size: 2rem;
     }
   }
-  .my-career{
+  .my-projects{
     padding: 20px 50px 80px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(252, 249, 246, 0.87);
+    background-color: rgb(253, 241, 202);
     
   }
-  .my-career-heading {
+  .my-project-heading {
     grid-column: 1 / -1;
-    color: #082140;
     margin-bottom: 0;
   }
   .portfolio-container{
@@ -123,6 +131,7 @@
   }
   .portfolio-card{
     border: solid 5px #fdfdfd;
+
     display: flex;
     flex-direction: column;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
@@ -144,11 +153,12 @@
     grid-template-rows: 40px 1fr;
     gap: 10px;
     padding: 25px;
-    background-color: white;
+    background-color: rgb(255, 252, 247);
   }
   .project-name,button {
   grid-row: 1 / 2;
   font-family: "Big Shoulders Stencil", sans-serif;
+  display: inline-flex;
 }
 
 .project-description {
@@ -161,6 +171,7 @@ button {
   width: 30px;
   background-color: transparent;
   border: none;
+  gap: 15px;
 }
 
 button:hover {
@@ -177,19 +188,23 @@ footer {
   .contact-me {
     background-color: white;
     padding: 20px;
+    border-radius: 10px;
+    transition: transform 550ms ease-in-out;
+
   }
-  
+  .contact-me:hover{
+    transform: scale(1.07);
+  }
+
   .contact-me > * {
     margin-bottom: 15px;
   }
   
-  .phone-wrapper,
-  .email-wrapper {
+  .phone-wrapper,.email-wrapper,.location-wrapper {
     display: flex;
   }
   
-  .phone-logo,
-  .email-logo {
+ button, .phone-logo,.email-logo {
     margin-right: 10px;
   }
   
@@ -199,7 +214,11 @@ footer {
     max-height: auto;
     padding: 25px;
     border-radius: 10%;
+    transition: transform 500ms ease-in-out;
   }
+.footer-img:hover{
+    transform: scale(1.05);
+}
   
   @media (max-width: 600px) {
     .footer-img {
